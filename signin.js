@@ -3,7 +3,7 @@ async function login(){
 let email = document.getElementById("email").value
 let password = document.getElementById("password").value
 
-let res = await fetch("/login",{
+let res = await fetch("/api/login",{
 method:"POST",
 headers:{
 "Content-Type":"application/json"
