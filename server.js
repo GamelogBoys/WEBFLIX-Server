@@ -3,12 +3,15 @@ const bodyParser = require("body-parser")
 const fs = require("fs")
 const nodemailer = require("nodemailer")
 const cors = require("cors")
+const path = require("path")
 
 const app = express()
 
 app.use(cors())
 app.use(bodyParser.json())
-app.use(express.static("public"))
+
+// SERVE FRONTEND FILES
+app.use(express.static(path.join(__dirname, "public")))
 
 
 
